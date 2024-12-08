@@ -1,0 +1,68 @@
+body {
+    background-image: url('images/4.jpeg');
+    background-size: cover;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3f4f6;
+    font-family:  'Brush Script MT', cursive;
+}
+
+h1 {
+    color: #fffdfe;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #571903;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #571903;
+    color:white;
+}
+
+button {
+    font-family: 'Lucida Handwriting', cursive;
+    color: white;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    color: #ffcc02;
+}
+
+.wishlist-container {
+    border-top:#571903 2px dashed;
+    margin-top: 30px;
+    color:white;
+}
+
+.wishlist-item {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(255, 246, 246, 0.1);
+}
+
+.items-list {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #f7faff;
+}
