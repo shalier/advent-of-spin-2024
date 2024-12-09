@@ -14,6 +14,7 @@ struct Wishlist {
 #[http_component]
 fn handle_request(req: Request) -> anyhow::Result<impl IntoResponse> {
     let store = Store::open_default()?;
+
     if req.method().to_string() == "POST"{
         if let Ok(new_wishlist) = serde_json::from_slice::<Wishlist>(req.body()) {
             let mut wishlists = match store.get(req.path())? {
@@ -23,12 +24,9 @@ fn handle_request(req: Request) -> anyhow::Result<impl IntoResponse> {
                 }
                 None => Vec::new(),
             };
-            
             wishlists.push(new_wishlist);
-            
             let json_string = serde_json::to_string(&wishlists)?;
             store.set(req.path(), json_string.as_bytes())?;
-            
             println!(
                 "Added new wishlist to collection at key {:?}",
                 req.path()
